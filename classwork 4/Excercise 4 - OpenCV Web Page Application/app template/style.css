@@ -1,0 +1,100 @@
+/* Complete Page Style */
+*{
+    margin: 0px; /* Margin of 0 pixels */
+    box-sizing: border-box; /* Box sizing will be done automatically*/
+}
+
+body {
+    background-color: white;
+}
+
+.main-page {
+    height: 20px;
+    display: flex;
+}
+
+.side-line {
+    background-color: #5c0264e5;
+    height: 100vh;
+    width: 25px;
+}
+
+.menu-bar {
+    background-color: #ba84d3;
+    height: 100vh;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    box-shadow: 1px 1px 10px rgb(185, 185, 185);
+}
+
+.circle {
+    height:75px;
+    width:75px;
+    background-color: #c7d0d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.purple-circle {
+    background-color: #5c0264e5;
+}
+
+.viz-header {
+    background-color: #5c0264e5;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgb(185, 185, 185);
+}
+
+.visualizer {
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px rgb(185, 185, 185);
+}
+
+.logo {
+    padding-right: 100px;
+}
+
+.empty {
+    padding-left: 100px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color:#ba84d3;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.viz-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#viz-tablet {
+    position: absolute;
+}
+
+/*
+#viz-canvas {
+    position: absolute;
+    z-index: -1;
+}
+*/

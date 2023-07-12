@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/andie/Documents/ulatinaedupa/tarea 4/tarea 4.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1089"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,19:mainvista_adultez_joven"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Usuarios" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="49"/><column index="2" value="39"/><column index="3" value="34"/><column index="4" value="101"/><column index="5" value="107"/><column index="6" value="80"/><column index="7" value="78"/><column index="8" value="118"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="vista_adultez_joven" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="135"/><column index="2" value="39"/><column index="3" value="34"/><column index="4" value="101"/><column index="5" value="107"/><column index="6" value="80"/><column index="7" value="78"/><column index="8" value="118"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">INSERT INTO Usuarios (Nombre, Fecha, Edad, FechaPrimerLogin, CantidadFamiliares, SaldoMensual, LimiteCredito, PorcentajeUtilizacion)
+SELECT
+  RANDOM(),
+  DATE('now', '-' || RANDOM() % 365 || ' days'),
+  RANDOM() % 41 + 10,
+  DATE('now', '-' || RANDOM() % 365 || ' days'),
+  RANDOM() % 6,
+  RANDOM() % 1000,
+  RANDOM() % 10000,
+  0.01 * (RANDOM() % 101)
+FROM
+  (SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5 UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 UNION SELECT 10)
+  CROSS JOIN
+  (SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5 UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 UNION SELECT 10);
+  
+SELECT *
+FROM Usuarios
+WHERE PorcentajeUtilizacion = 0.5 AND Edad &gt; 18;
+
+
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

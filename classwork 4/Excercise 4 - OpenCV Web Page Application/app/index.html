@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Vision Web Application</title>
+
+    <!-- Add OpenCV -->
+    <script async src="../resource/opencv.js" onload="opencvReady()"></script>
+    <!--Linking the style-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Material Icons (Google) -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- Add google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Roboto:ital,wght@0,500;1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Page (here goes everything) -->
+    <div class="main-page">
+        <!-- Side Line -->
+        <div class="side-line"></div>
+        <!-- Menu Bar -->
+        <div class="menu-bar">
+            <span class="circle" id="button-rgb"><i class="material-icons" style="font-sizze:36px; color:white;">palette</i></span>
+            <span class="circle" id="button-gray"><i class="material-icons" style="font-sizze:36px; color:white;">contrast</i></span>
+            <span class="circle" id="button-blur"><i class="material-icons" style="font-sizze:36px; color:white;">blur_on</i></span>
+            <span class="circle" id="button-canny"><i class="material-icons" style="font-sizze:36px; color:white;">grade</i></span>
+            <span class="circle purple-circle" id="button-video" onclick="processVideo()"><i class="material-icons" style="font-sizze:36px; color:white;">videocam</i></span>                       
+        </div>
+        <!-- Header Bar -->        
+        <div class="header-bar"></div>
+        <!-- Visualizer Zone  -->        
+        <div class="visualizer">
+            <!-- Header of Visualizer -->
+            <div class="viz-header">
+                <div class="empty"></div>
+                <h1>Image Processing</h1>
+                <div class="logo"><img src="../resource/vision.png" alt="" width="75px"></div>
+            </div>
+            <!-- Container of the app -->
+            <div class="viz-container">
+                <img id="viz-tablet" src="../resource/pngegg.png" alt="" width="1050" height="768" color="white">
+                <canvas id="viz-canvas" width="960" height="720">
+                    <img id="viz-img" src="../resource/parrots.jpg" alt="" class="parrot" width="960" height="720">
+                    <video id="viz-video" width="960" height="720"></video>                 
+                </canvas>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Link the script-->
+    <script src="main.js"></script>
+</body>
+</html>
